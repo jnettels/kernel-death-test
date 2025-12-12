@@ -7,8 +7,9 @@ dependencies:
     - geopandas >=1.0
     - pandas
     - openpyxl
-    
+
     # Others
+    - scipy
     - numpy >=2.0
     - numba
     - matplotlib
