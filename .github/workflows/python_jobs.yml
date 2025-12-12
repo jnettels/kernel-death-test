@@ -189,3 +189,36 @@ jobs:
             conda_list.txt
       - shell: pwsh
         run: python kernel_test.py
+
+  job_6:
+    name: pip only
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+        python-version: ["3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install pip dependencies
+        run: |
+          pip install --upgrade pip
+          pip install geopandas pandas openpyxl numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson
+
+      - name: Dump installed packages
+        run: pip freeze > installed_packages_pip.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: "${{ github.job}} - py${{ matrix.python-version }} - ${{ matrix.os }}"
+          path: installed_packages_pip.txt
+
+      - name: Run kernel test
+        run: python kernel_test.py
