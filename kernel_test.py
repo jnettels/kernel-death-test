@@ -28,8 +28,8 @@ gs = gpd.GeoSeries.from_wkt(df['wkt'])
 gdf = gpd.GeoDataFrame(df, geometry=gs, crs="EPSG:4326")
 
 print("Write a GeoDataFrame")
-geofile = "geopandas-test.gpkg"
-# geofile = "geopandas-test.geojson"
+geofile = "geopandas-test.gpkg"  # This causes the kernel error later
+# geofile = "geopandas-test.geojson"  # This is always fine
 gdf.to_file(geofile, engine=gpd_engine)
 print("OK")
 

@@ -9,8 +9,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -28,8 +28,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -47,8 +47,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -66,8 +66,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -85,8 +85,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -104,8 +104,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -123,8 +123,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -142,8 +142,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -161,8 +161,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -180,8 +180,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -199,8 +199,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -218,8 +218,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -237,8 +237,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -256,8 +256,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -275,8 +275,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -294,8 +294,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -313,8 +313,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -332,8 +332,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -351,8 +351,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -370,8 +370,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -389,8 +389,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -408,8 +408,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -427,8 +427,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -446,8 +446,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -465,8 +465,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -484,8 +484,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", '3.13']
+        os: [windows-latest]
+        python-version: ['3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
@@ -497,14 +497,33 @@ jobs:
       - shell: pwsh
         run: python kernel_test.py
 
+  job_27:
+    name: +coolprop
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+        python-version: ['3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: work
+          python-version: ${{ matrix.python-version }}
+      - shell: pwsh
+        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib fiona gdal>=3.7 rasterio osmnx>=1.9.4 momepy tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson coolprop -c conda-forge
+      - shell: pwsh
+        run: python kernel_test.py
+
   job_full:
     name: Full Environment File
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        os: [windows-latest]
+        python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
