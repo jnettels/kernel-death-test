@@ -19,6 +19,24 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
         run: conda install geopandas pandas openpyxl -c conda-forge
+      - name: Show environment info
+        shell: pwsh
+        run: |
+          conda info
+          conda list
+      - name: Dump environment details
+        shell: pwsh
+        run: |
+          conda info > conda_info.txt
+          conda list > conda_list.txt
+
+      - name: Upload environment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: job_2_environment
+          path: |
+            conda_info.txt
+            conda_list.txt
       - shell: pwsh
         run: python kernel_test.py
 
@@ -37,6 +55,24 @@ jobs:
           activate-environment: work
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full.yaml
+      - name: Show environment info
+        shell: pwsh
+        run: |
+          conda info
+          conda list
+      - name: Dump environment details
+        shell: pwsh
+        run: |
+          conda info > conda_info.txt
+          conda list > conda_list.txt
+
+      - name: Upload environment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: job_2_environment
+          path: |
+            conda_info.txt
+            conda_list.txt
       - shell: pwsh
         run: python kernel_test.py
 
@@ -55,6 +91,24 @@ jobs:
           activate-environment: work
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full_no_defaults.yaml
+      - name: Show environment info
+        shell: pwsh
+        run: |
+          conda info
+          conda list
+      - name: Dump environment details
+        shell: pwsh
+        run: |
+          conda info > conda_info.txt
+          conda list > conda_list.txt
+
+      - name: Upload environment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: job_2_environment
+          path: |
+            conda_info.txt
+            conda_list.txt
       - shell: pwsh
         run: python kernel_test.py
 
@@ -74,7 +128,25 @@ jobs:
           activate-environment: work
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
-        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib fiona gdal>=3.7 rasterio osmnx>=1.9.4 momepy tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson coolprop -c conda-forge
+        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
+      - name: Show environment info
+        shell: pwsh
+        run: |
+          conda info
+          conda list
+      - name: Dump environment details
+        shell: pwsh
+        run: |
+          conda info > conda_info.txt
+          conda list > conda_list.txt
+
+      - name: Upload environment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: job_2_environment
+          path: |
+            conda_info.txt
+            conda_list.txt
       - shell: pwsh
         run: python kernel_test.py
 
@@ -93,6 +165,24 @@ jobs:
           activate-environment: work
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
-        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib fiona gdal>=3.7 rasterio osmnx>=1.9.4 momepy tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson coolprop -c defaults -c conda-forge
+        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c defaults -c conda-forge
+      - name: Show environment info
+        shell: pwsh
+        run: |
+          conda info
+          conda list
+      - name: Dump environment details
+        shell: pwsh
+        run: |
+          conda info > conda_info.txt
+          conda list > conda_list.txt
+
+      - name: Upload environment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: job_2_environment
+          path: |
+            conda_info.txt
+            conda_list.txt
       - shell: pwsh
         run: python kernel_test.py
