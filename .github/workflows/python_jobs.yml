@@ -53,6 +53,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channels: defaults,conda-forge
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full.yaml
       - name: Show environment info
@@ -89,6 +90,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channels: conda-forge
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full_no_defaults.yaml
       - name: Show environment info
@@ -112,9 +114,8 @@ jobs:
       - shell: pwsh
         run: python kernel_test.py
 
-
   job_4:
-    name: conda-forge only
+    name: defaults, conda-forge
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -126,9 +127,10 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channels: defaults,conda-forge
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
-        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
+        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c defaults -c conda-forge
       - name: Show environment info
         shell: pwsh
         run: |
@@ -151,7 +153,7 @@ jobs:
         run: python kernel_test.py
 
   job_5:
-    name: defaults, conda-forge
+    name: conda-forge only
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -163,9 +165,10 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channels: conda-forge
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
-        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c defaults -c conda-forge
+        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
       - name: Show environment info
         shell: pwsh
         run: |
