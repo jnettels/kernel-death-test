@@ -33,7 +33,7 @@ jobs:
       - name: Upload environment artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ job.name }}
+          name: "${{ job.name }}-py${{ matrix.python-version }}-${{ matrix.os }}"
           path: |
             conda_info.txt
             conda_list.txt
@@ -70,7 +70,7 @@ jobs:
       - name: Upload environment artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ job.name }}
+          name: "${{ job.name }}-py${{ matrix.python-version }}-${{ matrix.os }}"
           path: |
             conda_info.txt
             conda_list.txt
@@ -107,7 +107,7 @@ jobs:
       - name: Upload environment artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ job.name }}
+          name: "${{ job.name }}-py${{ matrix.python-version }}-${{ matrix.os }}"
           path: |
             conda_info.txt
             conda_list.txt
@@ -145,7 +145,7 @@ jobs:
       - name: Upload environment artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ job.name }}
+          name: "${{ job.name }}-py${{ matrix.python-version }}-${{ matrix.os }}"
           path: |
             conda_info.txt
             conda_list.txt
@@ -183,7 +183,7 @@ jobs:
       - name: Upload environment artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ job.name }}
+          name: "${{ job.name }}-py${{ matrix.python-version }}-${{ matrix.os }}"
           path: |
             conda_info.txt
             conda_list.txt
