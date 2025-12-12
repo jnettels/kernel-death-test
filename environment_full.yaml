@@ -17,7 +17,7 @@ dependencies:
     - momepy
     - coolprop
     - fiona
-    - gdal >=3.7
+    #- gdal >=3.7
     - rasterio
     - tobler
     - h3-py
