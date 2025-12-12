@@ -1,0 +1,37 @@
+name: work
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - python
+    - geopandas >=1.0
+    - pandas
+    - openpyxl
+    
+    # Others
+    - numpy >=2.0
+    - numba
+    - matplotlib
+    - osmnx >=1.9.4
+    - momepy
+    - coolprop
+    - fiona
+    - gdal >=3.7
+    - rasterio
+    - tobler
+    - h3-py
+    - contextily
+    - libpysal
+    - shapely >=2.0
+    - xlsxwriter
+    - fuzzywuzzy
+    - owslib
+    - joblib
+    - PyUtilib
+    - Pyomo >=6.8.0
+    - addict
+    - blinker
+    - dill
+    - nose
+    - deepdiff
+    - geojson

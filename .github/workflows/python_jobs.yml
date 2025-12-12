@@ -1,0 +1,59 @@
+name: Python Jobs
+
+on: [push, pull_request]
+
+jobs:
+  job_1:
+    runs-on: ${{ matrix.os }}
+    name: Minimal Test
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1  # use the latest code commit
+
+    - name: Setup conda with python ${{ matrix.python-version }}
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        auto-update-conda: true
+        activate-environment: work
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies with conda
+      shell: pwsh  # Needed where conda env is used
+      run: |
+        conda install geopandas pandas openpyxl -c defaults
+
+    - name: Run kernel-death test script
+      shell: pwsh  # Needed where conda env is used
+      run: python kernel_test.py
+
+
+  job_2:
+    runs-on: ${{ matrix.os }}
+    name: Full Test
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1  # use the latest code commit
+
+    - name: Setup conda with python ${{ matrix.python-version }}
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        auto-update-conda: true
+        activate-environment: work
+        environment-file: environment_full.yaml
+        python-version: ${{ matrix.python-version }}
+
+    - name: Run kernel-death test script
+      shell: pwsh  # Needed where conda env is used
+      run: python kernel_test.py
