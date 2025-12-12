@@ -22,7 +22,7 @@ jobs:
       - shell: pwsh
         run: python kernel_test.py
 
-  job_full:
+  job_2:
     name: Full Environment File (defaults, conda-forge)
     runs-on: ${{ matrix.os }}
     strategy:
@@ -40,7 +40,7 @@ jobs:
       - shell: pwsh
         run: python kernel_test.py
 
-  job_full_no_defaults:
+  job_3:
     name: Full Environment File (conda-forge only)
     runs-on: ${{ matrix.os }}
     strategy:
@@ -55,5 +55,44 @@ jobs:
           activate-environment: work
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full_no_defaults.yaml
+      - shell: pwsh
+        run: python kernel_test.py
+
+
+  job_4:
+    name: conda-forge only
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+        python-version: ['3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: work
+          python-version: ${{ matrix.python-version }}
+      - shell: pwsh
+        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib fiona gdal>=3.7 rasterio osmnx>=1.9.4 momepy tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson coolprop -c conda-forge
+      - shell: pwsh
+        run: python kernel_test.py
+
+  job_5:
+    name: defaults, conda-forge
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+        python-version: ['3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: work
+          python-version: ${{ matrix.python-version }}
+      - shell: pwsh
+        run: conda install geopandas pandas openpyxl numpy>=2 numba matplotlib fiona gdal>=3.7 rasterio osmnx>=1.9.4 momepy tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson coolprop -c defaults -c conda-forge
       - shell: pwsh
         run: python kernel_test.py
