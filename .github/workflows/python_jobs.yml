@@ -210,7 +210,7 @@ jobs:
       - name: Install pip dependencies
         run: |
           pip install --upgrade pip
-          pip install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3 contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson
+          pip install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona rasterio tobler h3 contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson
 
       - name: Dump installed packages
         run: pip freeze > installed_packages_pip.txt
