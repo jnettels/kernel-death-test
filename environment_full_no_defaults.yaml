@@ -8,16 +8,17 @@ dependencies:
     - openpyxl
     
     # Others
-    - numpy >=2.0
-    - numba
+    - scipy
+    #- numpy >=2.0
+    #- numba
     - matplotlib
-    - osmnx >=1.9.4
+    #- osmnx >=1.9.4
     - momepy
     - coolprop
-    - fiona
-    - gdal >=3.7
-    - rasterio
-    - tobler
+    #- fiona
+    #- gdal >=3.7
+    #- rasterio
+    #- tobler
     - h3-py
     - contextily
     - libpysal
@@ -33,4 +34,4 @@ dependencies:
     - dill
     - nose
     - deepdiff
-    - geojson
+    #- geojson
