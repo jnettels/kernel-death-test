@@ -5,7 +5,7 @@ channels:
 dependencies:
     - python
     - defaults::geopandas >=1.0
-    - pandas
+    - defaults::pandas
     - defaults::openpyxl
 
     # Others
@@ -17,7 +17,7 @@ dependencies:
     - momepy
     - coolprop
     - fiona
-    - defaults::gdal >=3.7
+    - gdal >=3.7
     - rasterio
     - tobler
     - h3-py
