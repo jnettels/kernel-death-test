@@ -16,7 +16,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
-          channel-priority: strict
+          # channel-priority: strict
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
         run: conda install geopandas pandas openpyxl -c conda-forge
@@ -54,8 +54,8 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
-          channel-priority: strict
-          channels: conda-forge,defaults
+          # channel-priority: strict
+          channels: defaults,conda-forge
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full.yaml
       - name: Show environment info
@@ -92,7 +92,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
-          channel-priority: strict
+          # channel-priority: strict
           channels: conda-forge
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full_no_defaults.yaml
@@ -130,8 +130,8 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
-          channel-priority: strict
-          channels: conda-forge,defaults
+          # channel-priority: strict
+          channels: defaults,conda-forge
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
         run: conda config --set channel_priority strict
