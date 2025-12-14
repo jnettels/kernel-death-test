@@ -36,4 +36,5 @@ dependencies:
     - nose
     - deepdiff
     - geojson
+    - sqlite ==3.51.0 
     
