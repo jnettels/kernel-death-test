@@ -16,6 +16,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channel-priority: strict
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
         run: conda install geopandas pandas openpyxl -c conda-forge
@@ -53,6 +54,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channel-priority: strict
           channels: defaults,conda-forge
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full.yaml
@@ -90,6 +92,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channel-priority: strict
           channels: conda-forge
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full_no_defaults.yaml
@@ -127,8 +130,11 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channel-priority: strict
           channels: defaults,conda-forge
           python-version: ${{ matrix.python-version }}
+      - shell: pwsh
+        run: conda config --set channel_priority strict
       - shell: pwsh
         run: conda install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c defaults -c conda-forge
       - name: Show environment info
@@ -165,8 +171,11 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: work
+          channel-priority: strict
           channels: conda-forge
           python-version: ${{ matrix.python-version }}
+      - shell: pwsh
+        run: conda config --set channel_priority strict
       - shell: pwsh
         run: conda install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
       - name: Show environment info
