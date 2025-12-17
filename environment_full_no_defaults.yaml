@@ -34,3 +34,4 @@ dependencies:
     - deepdiff
     - geojson
     - sqlite
+    - mkl-service  # As per UserWarning
