@@ -10,19 +10,18 @@ dependencies:
     # Others
     - scipy
     - numpy >=2.0
-    # - numba
+    - numba
     # - matplotlib
-    # - osmnx >=1.9.4
-    # - momepy
+    - osmnx >=1.9.4
+    - momepy
     - coolprop
     - fiona
-    # - gdal >=3.7
+    - gdal >=3.7
     - tobler
     - h3-py
     - contextily
     - libpysal
     - shapely >=2.0
-    # - xlsxwriter
     - fuzzywuzzy
     - joblib
     - PyUtilib
