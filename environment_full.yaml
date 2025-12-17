@@ -33,5 +33,5 @@ dependencies:
     - dill
     - nose
     - deepdiff
-    # - geojson
+    - geojson
     - sqlite
