@@ -12,10 +12,10 @@ dependencies:
     - scipy
     - numpy >=2.0
     # - numba
-    # - matplotlib
+    - matplotlib
     # - osmnx >=1.9.4
     # - momepy
-    # - coolprop
+    - coolprop
     - fiona
     # - gdal >=3.7
     - rasterio
@@ -25,15 +25,15 @@ dependencies:
     - libpysal
     - shapely >=2.0
     # - xlsxwriter
-    # - fuzzywuzzy
-    # - owslib
+    - fuzzywuzzy
+    - owslib
     - joblib
-    # - PyUtilib
-    # - Pyomo >=6.8.0
-    # - addict
-    # - blinker
-    # - dill
-    # - nose
-    # - deepdiff
-    # - geojson
+    - PyUtilib
+    - Pyomo >=6.8.0
+    - addict
+    - blinker
+    - dill
+    - nose
+    - deepdiff
+    - geojson
     - sqlite
