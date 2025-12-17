@@ -8,25 +8,25 @@ dependencies:
     - openpyxl
 
     # Others
-    # - scipy
-    # - numpy >=2.0
+    - scipy
+    - numpy >=2.0
     # - numba
     # - matplotlib
     # - osmnx >=1.9.4
     # - momepy
     # - coolprop
-    # - fiona
+    - fiona
     # - gdal >=3.7
-    # - rasterio
+    - rasterio
     - tobler
     # - h3-py
     # - contextily
-    # - libpysal
-    # - shapely >=2.0
+    - libpysal
+    - shapely >=2.0
     # - xlsxwriter
     # - fuzzywuzzy
     # - owslib
-    # - joblib
+    - joblib
     # - PyUtilib
     # - Pyomo >=6.8.0
     # - addict
@@ -35,4 +35,4 @@ dependencies:
     # - nose
     # - deepdiff
     # - geojson
-    # - sqlite ==3.51.0
+    - sqlite
