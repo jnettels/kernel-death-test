@@ -11,7 +11,7 @@ dependencies:
     - scipy
     - numpy >=2.0
     # - numba
-    # - matplotlib
+    - matplotlib
     # - osmnx >=1.9.4
     # - momepy
     - coolprop
