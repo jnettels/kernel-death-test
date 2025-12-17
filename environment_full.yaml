@@ -12,15 +12,15 @@ dependencies:
     - scipy
     - numpy >=2.0
     # - numba
-    - matplotlib
+    # - matplotlib
     # - osmnx >=1.9.4
     # - momepy
     - coolprop
     - fiona
     # - gdal >=3.7
     - tobler
-    # - h3-py
-    # - contextily
+    - h3-py
+    - contextily
     - libpysal
     - shapely >=2.0
     # - xlsxwriter
@@ -35,4 +35,4 @@ dependencies:
     - deepdiff
     - geojson
     - sqlite
-    - mkl-service  # As per UserWarning
+    # - mkl-service  # As per UserWarning
