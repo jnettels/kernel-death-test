@@ -173,7 +173,7 @@ jobs:
           channels: conda-forge
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
-        run: conda install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 # rasterio tobler h3-py contextily libpysal shapely>=2.0 xlsxwriter fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
+        run: conda install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 rasterio tobler h3-py contextily libpysal # shapely>=2.0 fuzzywuzzy owslib joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
       - name: Show environment info
         shell: pwsh
         run: |
