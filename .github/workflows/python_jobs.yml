@@ -42,7 +42,7 @@ jobs:
         run: python kernel_test.py
 
   job_2:
-    name: Full Environment File (defaults, conda-forge)
+    name: Full Environment File (conda-forge,defaults)
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -55,7 +55,7 @@ jobs:
         with:
           activate-environment: work
           # channel-priority: strict
-          channels: defaults,conda-forge
+          channels: conda-forge,defaults
           python-version: ${{ matrix.python-version }}
           environment-file: environment_full.yaml
       - name: Show environment info
@@ -173,7 +173,7 @@ jobs:
           channels: conda-forge
           python-version: ${{ matrix.python-version }}
       - shell: pwsh
-        run: conda install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 tobler h3-py contextily libpysal shapely>=2.0 fuzzywuzzy joblib # pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
+        run: conda install geopandas pandas openpyxl scipy numpy>=2 numba matplotlib osmnx>=1.9.4 momepy coolprop fiona gdal>=3.7 tobler h3-py contextily libpysal shapely>=2.0 fuzzywuzzy joblib pyutilib pyomo>=6.8 addict blinker dill nose deepdiff geojson -c conda-forge
       - name: Show environment info
         shell: pwsh
         run: |

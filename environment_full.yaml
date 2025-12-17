@@ -1,7 +1,7 @@
 name: work
 channels:
-    - defaults
     - conda-forge
+    - defaults
 dependencies:
     - python
     - geopandas >=1.0
@@ -12,7 +12,7 @@ dependencies:
     - scipy
     - numpy >=2.0
     - numba
-    - conda-forge::matplotlib
+    - matplotlib
     - osmnx >=1.9.4
     - momepy
     - coolprop
