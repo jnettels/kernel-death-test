@@ -19,7 +19,7 @@ dependencies:
     # - fiona
     # - gdal >=3.7
     # - rasterio
-    # - tobler
+    - tobler
     # - h3-py
     # - contextily
     # - libpysal
